@@ -6,7 +6,7 @@ function useTasks() {
   useEffect(() => {
     async function getTasks() {
       try {
-        const res = await fetch('/todo/tasks');
+        const res = await fetch('https://to-do-app-backend-jmiy.onrender.com/todo/tasks');
         const tasksData = await res.json();
         setTasks(tasksData);
       } catch (error) {
@@ -18,7 +18,7 @@ function useTasks() {
 
   const createTask = async (newTaskData) => {
     try {
-      const res = await fetch('/todo/tasks', {
+      const res = await fetch('https://to-do-app-backend-jmiy.onrender.com/todo/tasks', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ function useTasks() {
 
   const updateTaskStatus = async (taskId, status) => {
     try {
-      await fetch(`/todo/tasks/${taskId}`, {
+      await fetch(`https://to-do-app-backend-jmiy.onrender.com/todo/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ function useTasks() {
 
   const updateTask = async (updatedTask, taskId) => {
     try {
-      const res = await fetch(`/todo/tasks/${taskId}`, {
+      const res = await fetch(`https://to-do-app-backend-jmiy.onrender.com/todo/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ function useTasks() {
 
   const deleteTask = async (taskId) => {
     try {
-      await fetch(`/todo/tasks/${taskId}`, {
+      await fetch(`https://to-do-app-backend-jmiy.onrender.com/todo/tasks/${taskId}`, {
         method: 'DELETE',
       });
 
