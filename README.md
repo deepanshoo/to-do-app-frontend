@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# MERN ToDo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The MERN ToDo App is a task management application built using the MERN stack (MongoDB, Express.js, React, and Node.js). It allows users to create, read, update, and delete tasks. The app features a clean and responsive design that works well on both desktop and mobile devices.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Create new tasks with a title, description, and due date.
+- View a list of all tasks.
+- Update the status of tasks (e.g., mark as in-progress, completed).
+- Edit existing tasks.
+- Delete tasks.
+- Responsive design for mobile and desktop.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **MongoDB**: A NoSQL database to store tasks.
+- **Express.js**: A web application framework for Node.js to handle routing and server-side logic.
+- **React**: A JavaScript library for building user interfaces.
+- **Node.js**: A JavaScript runtime to build the server-side application.
+- **Axios**: A promise-based HTTP client for the browser and Node.js to make API requests.
+- **CSS**: For styling the application.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Before you begin, ensure you have met the following requirements:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js and npm installed on your machine.
+- MongoDB installed and running on your machine or a MongoDB Atlas account.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   git clone https://github.com/yourusername/mern-todo-app.git
+   cd mern-todo-app
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install server dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    cd server
+    npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install client dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    cd ../client
+    npm install
 
-## Learn More
+4. **Environment Variables:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Create a .env file in the server directory and add the following environment variables:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+    MONGO_URI=your_mongodb_connection_string
+    PORT=5000
+    Replace your_mongodb_connection_string with your actual MongoDB connection string.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Running the Application:**
 
-### Analyzing the Bundle Size
+    1. **Start the server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        cd server
+        npm start
+        The server will run on http://localhost:5000.
 
-### Making a Progressive Web App
+    2. **Start the client:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+        cd ../client
+        npm start
+        The client will run on http://localhost:3000.
 
-### Advanced Configuration
+6. **Using the Application:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Open your browser and navigate to http://localhost:3000.
+    Use the form to create new tasks by providing a title, description, and due date.
+    View the list of tasks.
+    Update the status of tasks by clicking the appropriate button.
+    Edit tasks by clicking the "Edit" button and updating the task details.
+    Delete tasks by clicking the "Delete" button.

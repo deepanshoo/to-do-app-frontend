@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* APP */
+
+body {
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* container */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding to the sides for mobile compatibility */
+}
+
+/* todos list */
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  padding: 3rem 0 1rem;
+}
+
+.task {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 60%; 
+  font-size: 1.2rem; 
+  border-radius: 1rem;
+  border: 2px solid white;
+  transition: all 0.2s;
+  margin-top: 2rem;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+   }
+}
+
+.mutations {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.task__status,
+.task__delete {
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  color: white;
+  font-size: 1.4rem; 
+}
+
+.task__status {
+  font-size: 1.6rem; 
+}
+
+/* form */
+.create-form-container {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 60%;
+  font-size: 1.2rem; 
+  border-radius: 1rem;
+  border: 2px solid white;
+  transition: all 0.2s;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+   }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.form__input {
+  display: block;
+  border-radius: 0.5rem;
+}
+
+.form__input label {
+  margin-bottom: 0.25rem;
+}
+
+.form__input input,
+.form__input textarea,
+.form__input select {
+  width: 100%;
+}
+
+.form__button {
+  border: none;
+  background-color: rgba(113, 0, 212, 0.7);
+  padding: 1rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 0.6rem;
+  transition: all 0.2s;
+  margin-right: 0.6rem;
+  margin-top: 2rem;
+  &:hover {
+    background-color: rgba(95, 0, 179, 0.5);
+  }
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .task {
+    font-size: 1rem;
+    width:100%;
+  }
+  .form__button{
+    display:flex;
+    margin:0.5rem;
+  }
+  .create-form-container {
+    font-size: 1rem;
+    width:100%;
+  }
+}
